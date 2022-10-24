@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{base :: head}"></head>
+<body>
+<div th:replace="~{base :: logo}"></div>
+<div class="container">
+    <div th:replace="~{base :: titulo('Feed')}"></div>
+    <div class="d-grid gap-3" style="margin-bottom: 1rem;">
+    <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" th:href="@{/usuario/home/}">HOME</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/pontos/}">Meus pontos</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/historico/}">Meu historico</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/loja/home/}">Loja</a>
+        <a href="/reciclagem">
+            <button class="btn btn-outline-secondary">Cadastrar nova reciclagem</button>
+        </a>
+    </nav>
+    </div>
+    <div class="d-grip gap-3" style="margin-bottom: 1 rem;">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a href="/usuario/home">
+                <button class="btn btn-primary">Voltar</button>
+            </a>
+        </nav>
+    </div>
+    <h1 style="margin-bottom: 1rem; text-align: center;">Pontos de coleta</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="" class="card-img-top" alt="..." th:src="@{/images/seuze.png}">
+                <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title">Reciclagem do Seu Zé</h5>
+                    <p class="card-text">Rua da reciclagem, 123</p>
+                    <a th:href="@{locais/seuze}" class="btn btn-primary">Mais informações</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="" class="card-img-top" alt="..." th:src="@{/images/reciclagem2.png}">
+                <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title">Eco Ponto</h5>
+                    <p class="card-text">Avenida da reciclagem, 321</p>
+                    <a th:href="@{locais/ecoPonto}" class="btn btn-primary">Mais informações</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="" class="card-img-top" alt="..." th:src="@{/images/reciclagem3.png}">
+                <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title">Posto de Coleta</h5>
+                    <p class="card-text">Rua dos recicladores, 987</p>
+                    <a th:href="@{locais/pontoDeColeta}" class="btn btn-primary">Mais informações</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{base :: head}"></head>
+<body>
+<div th:replace="~{base :: logo}"></div>
+<div class="container">
+    <div th:replace="~{base :: titulo('Feed')}"></div>
+    <div class="d-grid gap-3" style="margin-bottom: 1rem;">
+    <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" th:href="@{/usuario/home/}">HOME</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/pontos/}">Meus pontos</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/historico/}">Meu historico</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/loja/home/}">Loja</a>
+        <a href="/reciclagem">
+            <button class="btn btn-outline-secondary">Cadastrar nova reciclagem</button>
+        </a>
+    </nav>
+        <div class="d-grip gap-3" style="margin-bottom: 1 rem;">
+            <nav class="nav nav-pills flex-column flex-sm-row">
+                <a href="/usuario/home">
+                <button class="btn btn-primary">Voltar</button>
+                </a>
+            </nav>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h1 style="text-align: center;">Como fazer reciclagem em casa</h1>
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <h2>Aprenda algumas dicas de como começar a reciclar em casa</h2>
+                <p> O brasileiro produz, em média, cerca de 1 kg de lixo diariamente.
+                    Se o descarte de todo esse lixo não for feito de maneira apropriada, ele se torna um verdadeiro
+                    poluente do meio ambiente. Plásticos, metais, vidros, óleo de cozinha, restos de comida e muito mais.
+                    Com destino incerto, esses e tantos outros itens presentes no cotidiano vão parar em meio à natureza.
+
+                    Assim, contaminando a terra, o lençol freático e o mar, afetando o ecossistema e degradando o meio ambiente.
+                    Isso tudo é um problema sério e que vem se agravando a cada ano. Por isso, esse é um tema que precisa ser
+                    discutido e levado a sério.</p>
+                <h2>Mudança de hábitos</h2>
+                <p>
+                    A forma mais simples de fazer a reciclagem de lixo doméstico consiste em separar seus resíduos em
+                    duas categorias: recicláveis e não recicláveis. O lixo reciclável engloba todos os materiais que podem ser
+                    reciclados para voltar ao consumidor de alguma forma, seja como novos produtos ou matéria-prima. São eles:
+                    papéis (papelão, jornal etc.), plásticos, metais e vidros.
+
+                    Cartelas de comprimidos e bandejas de isopor também devem ser descartadas com o reciclável, pois podem se
+                    transformar em matéria-prima para blocos da construção civil. É importante, ainda, que as embalagens plásticas
+                    sejam higienizadas (de preferência, com água de reúso, como a da máquina de lavar), as
+                    caixas de papelão dobradas (para economizar espaço), os vidros embalados em jornal ou papelão caso estejam
+                    quebrados, para não machucar quem os manusear. Os papéis podem ser dobrados, porém, não devem estar amassados.
+
+                    O lixo eletrônico (pilhas, baterias, celulares e demais eletrônicos) e as lâmpadas, apesar de serem considerados
+                    recicláveis, devem ser encaminhados para pontos específicos de coleta. No caso de pilhas e baterias de celular,
+                    estas podem ser devolvidas diretamente aos fabricantes, basta entrar em contato com eles.
+                    Também há pontos disponibilizados, por exemplo, em unidades de grandes supermercados.
+                </p>
+            </blockquote>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{base :: head}"></head>
+<body>
+<div th:replace="~{base :: logo}"></div>
+<div class="container">
+    <div th:replace="~{base :: titulo('Meus pontos')}"></div>
+    <div class="d-grid gap-3" style="margin-bottom: 1rem;">
+    <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link"  th:href="@{/usuario/home/}">HOME</a>
+        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" th:href="@{/usuario/pontos/}">Meus pontos</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/historico/}">Meu historico</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/loja/home/}">Loja</a>
+        <a href="/reciclagem">
+            <button class="btn btn-outline-secondary">Cadastrar nova reciclagem</button>
+        </a>
+    </nav>
+    </div>
+<!--    <div>-->
+<!--    <h1>-->
+<!--        <th:block>-->
+<!--            <div class="card-header alert-dark" th:text="'Saldo de pontos: '+${pontos}">PONTOS</div>-->
+<!--            <div class="card-header alert-dark" th:text="'Nivel: '+${nivel}">NIVEL</div>-->
+<!--            <div class="card-header alert-dark" th:text="'Experiencia: '+${experiencia}">EXPERIENCIA</div>-->
+<!--        </th:block>-->
+<!--    </h1>-->
+<!--    </div>-->
+    <div class="d-grid gap-3" style="margin-bottom: 1rem;">
+        <h3 style="text-align: center;">Nível</h3>
+        <h1 style="text-align: center;" th:text="${nivel}"></h1>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuemin="0" aria-valuemax="100" th:style="'width:'+ ${percentage}+'%;'"></div>
+        </div>
+        <div class="position-relative" style="margin-bottom: 2rem; font-weight: bold;">
+            <div class="position-absolute top-0 start-0" th:text="'Nível '+${nivel}"></div>
+            <div class="position-absolute top-0 end-0" th:text="'Nível '+${nivel+1}"></div>
+        </div>
+        <div class="card text-center" style="margin-bottom: 1rem;">
+            <div class="card-header" style="font-weight: bold">
+                <h3>Seus pontos</h3>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title" th:text="'Você tem '+${pontos} + ' pontos.'" style="margin-bottom: 1rem;"></h5>
+                <a href="/loja/home" class="btn btn-primary">Ir à loja</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card text-center" style="margin-bottom: 1rem;">
+        <div class="card-header" style="font-weight: bold">
+            <h3>Suas trocas</h3>
+        </div>
+        <div class="card-body" th:each="produto: ${produtosJaComprados}">
+            <div class="card text-center" style="margin-bottom: 1rem;">
+                <div class="card-header" style="font-weight: bold">
+                    <h3 th:text="${produto.nome}"></h3>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" th:text="'Custou '+${produto.valorPontos} + ' pontos.'" style="margin-bottom: 1rem;"></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

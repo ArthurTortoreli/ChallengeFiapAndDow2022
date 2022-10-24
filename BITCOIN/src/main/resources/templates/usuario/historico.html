@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{base :: head}"></head>
+<body>
+<div th:replace="~{base :: logo}"></div>
+<div class="container">
+    <div th:replace="~{base :: titulo('Meu histórico')}"></div>
+    <div class="d-grid gap-3" style="margin-bottom: 1rem;">
+    <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link" aria-current="page" th:href="@{/usuario/home/}">HOME</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/pontos/}">Meus pontos</a>
+        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" th:href="@{/usuario/historico/}">Meu historico</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/loja/home/}">Loja</a>
+        <a href="/reciclagem">
+            <button class="btn btn-outline-secondary">Cadastrar nova reciclagem</button>
+        </a>
+    </nav>
+    </div>
+    <h1 style="margin-bottom: 1rem; text-align: center;">Histórico</h1>
+    <div class="card" th:each="reciclagem: ${reciclagensVO}">
+        <h5 class="card-header" th:text="'Reciclagem #'+${reciclagem.id}"></h5>
+        <div class="card-body">
+            <h5 class="card-title">Detalhes da reciclagem</h5>
+            <p class="card-text" th:text="'Essa reciclagem te gerou '+${reciclagem.pontosGerados} + ' pontos.'"></p>
+            <p class="card-text" th:text="'O material usado foi '+${reciclagem.material}"></p>
+            <p class="card-text" th:text="'Essa reciclagem foi no dia '+${#temporals.format(reciclagem.data, 'dd/MM/yyyy')}"></p>
+            <p class="card-text" th:text="'Você reciclou '+${reciclagem.quantidade} + ' KG de '+${reciclagem.material}"></p>
+            <div class="p-3 mb-2 bg-success text-white">APROVADA</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{base :: head}"></head>
+<body>
+<div th:replace="~{base :: logo}"></div>
+<div class="container">
+    <div th:replace="~{base :: titulo('Feed')}"></div>
+    <div class="d-grid gap-3" style="margin-bottom: 1rem;">
+    <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" th:href="@{/usuario/home/}">HOME</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/pontos/}">Meus pontos</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/historico/}">Meu historico</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/loja/home/}">Loja</a>
+        <a href="/reciclagem">
+            <button class="btn btn-outline-secondary">Cadastrar nova reciclagem</button>
+        </a>
+    </nav>
+    </div>
+    <div class="d-grip gap-3" style="margin-bottom: 2rem;">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a href="/usuario/home">
+                <button class="btn btn-primary">Voltar</button>
+            </a>
+        </nav>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h1 style="text-align: center;">4 Dicas de reciclagem</h1>
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <h2>4 dicas para fazer a reciclagem do lixo em sua casas</h2>
+
+                <p>Se você ainda não adotou a reciclagem em casa, é melhor começar o quanto antes. Essa é uma das melhores maneiras de ajudar o meio ambiente e preservar o planeta que vamos deixar de herança para as próximas gerações.
+
+                    A quantidade de lixo doméstico gerado diariamente pelas famílias tem aumentado no Brasil e no mundo. É fundamental que cada um cuide da reciclagem em sua própria residência, além de ensinar às crianças os bons hábitos, em nome da sustentabilidade.
+
+                    Então, para que você possa ficar com a consciência tranquila ao fazer a sua parte, preparamos este artigo com dicas para fazer a reciclagem do lixo em sua casa. Confira!
+                </p>
+                <h3>1. Aproveite o máximo do lixo orgânico</h3>
+                <p>
+                    Todo aquele material biológico, seja de origem vegetal ou animal, que precisa ser descartado é chamado de lixo orgânico. Ele inclui cascas de frutas, legumes e ovos, os restos de alimentos não consumidos ou fora do prazo de validade, borra de café, etc.
+
+                    Então, o que fazer para produzir menos lixo orgânico e evitar desperdícios? Podemos fazer muito, acredite. Veja algumas sugestões:
+
+                    Programe bem as compras no supermercado, para evitar comprar em excesso e ter de descartar produtos que perdem a validade antes de serem consumidos;
+                    Observe a maneira correta de guardar frutas, legumes e verduras na geladeira, para que durem mais;
+                    Congele em porções diárias o que não será consumido no curto prazo;
+                    Use a criatividade para preparar receitas aproveitando caules, folhas e cascas dos vegetais;
+                    Calcule bem a quantidade de comida necessária para uma refeição e aprenda a aproveitar as sobras, criando novos pratos no dia seguinte;
+                    Aprenda a fazer compostagem doméstica, para transformar o lixo orgânico em biofertilizante e adubar seus vasos, hortas e canteiros de plantas.
+                </p>
+                <h3>2. Separe o lixo seco pelo tipo de materiais</h3>
+                <p>
+                    E aquele material que não tem origem animal ou vegetal? Esse é o lixo seco ou inorgânico, que é produzido pela ação do homem e não da natureza. Nesse tipo, estão os materiais como:
+
+                    Plástico;
+                    Alumínio;
+                    Vidros;
+                    Papel e papelão;
+                    Tecidos;
+                    Metais.
+                    O mínimo que você pode fazer, em sua casa, é separar o lixo orgânico do inorgânico em duas lixeiras diferentes. Isso já representa uma pequena ajuda para o pessoal da triagem dos centros de reciclagem e aterros sanitários.
+
+                    No entanto, o ideal mesmo é ter contentores em cores diferentes para descartar cada tipo de resíduo. Observe as cores das lixeiras correspondentes a cada material:
+
+                    Plástico: vermelho;
+                    Vidro: verde;
+                    Papel e papelão: azul;
+                    Madeira: preto;
+                    Metal: amarelo;
+                    O branco é destinado para o material hospitalar e o roxo é para produtos radioativos. Contudo, com os demais, você não terá de se preocupar ao fazer a reciclagem em casa, já que os descartes hospitalares não fazem parte do lixo doméstico.
+
+                    Uma recomendação importante é lavar as embalagens recicláveis, como caixas de leite e garrafas pet, e deixar secar bem antes de colocar nos contentores. Isso evita mau cheiro e contaminação dos outros materiais.
+
+                    E por que não colocar a criatividade para funcionar e aproveitar materiais recicláveis para trabalhos artesanais? Na internet, há uma infinidade de tutoriais ensinando a aproveitar vidros, caixas de leite, garrafas pet, embalagens de papelão e tantos outros materiais. Além de preservar a natureza, você conta com uma fonte de renda extra para reforçar o orçamento.
+                </p>
+                <h3>3. Tenha muito cuidado no descarte de resíduos perigosos</h3>
+                <p>
+                    Alguns materiais envolvem riscos para quem os manuseia, mas, sobretudo, para a natureza. É o caso das pilhas, baterias, objetos eletrônicos, vidros quebrados, produtos químicos, lâmpadas, medicamentos, etc.
+
+                    Quando se tratar de cacos de vidro, é recomendável colocar os pedaços dentro de garrafas pet ou enrolar em várias camadas de jornais, para prevenir cortes em quem terá de lidar com os materiais coletados. Na verdade, além dos cortes, um risco ainda maior provocado pelo vidro na natureza são os incêndios. Um raio de sol incidindo em um pequeno caco pode gerar uma faísca e provocar uma tragédia.
+
+                    As lâmpadas também exigem um cuidado maior, pois algumas, como as de LED e as fluorescentes contêm metais pesados e gases que contaminam a natureza. O certo é pedir instruções às lojas de materiais elétricos sobre os pontos de coleta, ou levar diretamente aos centros de reciclagem da sua cidade.
+
+                    O mesmo cuidado deve ser tomado com as pilhas, baterias, fios, carregadores e objetos eletrônicos: procure as lojas que comercializam tais produtos e solicite o descarte adequado. As grandes redes de supermercados já oferecem contentores para receber pilhas e baterias usadas.
+
+                    Quanto aos objetos eletrônicos, existem empresas de aproveitamento que recolhem em sua própria residência o material para reciclagem. Uma rápida pesquisa na internet vai listar algumas delas em sua cidade ou nas redondezas.
+
+                    Resíduos de produtos químicos e de medicamentos são um grande risco para o meio ambiente, por conterem elementos tóxicos e nocivos à saúde humana e à natureza. As boas farmácias recebem os medicamentos fora de validade ou que não serão mais aproveitados.
+
+                    Vai pintar a casa? Calcule bem a quantidade de tinta necessária. Se sobrar, faça uma doação para amigos ou alguém da vizinhança. Ainda sobrou? Nunca jogue na rede de esgoto. Deixe a lata aberta até secar e misture com areia, antes de descartar.
+                </p>
+                <h3>4. Adote e ensine atitudes sustentáveis às crianças</h3>
+                <p>
+                    A educação das crianças para a sustentabilidade precisa começar o quanto antes. Ensine por meio de bons exemplos, como:
+
+                    resista ao consumismo excessivo, compre apenas o necessário;
+                    evite os sacos plásticos ao máximo, adote sacolas de pano ou reutilizáveis para ir ao supermercado;
+                    prefira produtos naturais ou biodegradáveis para sua casa;
+                    tente consertar o que estragou, em vez de descartar e comprar um aparelho novo;
+                    use a criatividade para reformar e customizar as roupas para a próxima estação;
+                    ensine o desapego e mostre aos seus filhos a importância de doar roupas e brinquedos para famílias carentes.
+                    Esperamos que nosso artigo seja um incentivo para que você comece, hoje mesmo, a fazer a reciclagem em casa. Se cada um fizer a sua parte, nossa herança para as próximas gerações será um planeta mais limpo e saudável. E já que falamos em cuidado com o meio ambiente, garanta também a proteção de seu lar com o Porto Seguro Residência.
+                </p>
+            </blockquote>
+        </div>
+    </div>
+</div>
+</body>
+</html>

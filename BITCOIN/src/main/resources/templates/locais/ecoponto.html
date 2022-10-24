@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{base :: head}"></head>
+<body>
+<div th:replace="~{base :: logo}"></div>
+<div class="container">
+    <div th:replace="~{base :: titulo('Home')}"></div>
+    <div class="d-grid gap-3" style="margin-bottom: 1rem;">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" th:href="@{/usuario/home/}">HOME</a>
+            <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/pontos/}">Meus pontos</a>
+            <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/historico/}">Meu historico</a>
+            <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/loja/home/}">Loja</a>
+            <a href="/reciclagem">
+                <button class="btn btn-outline-secondary">Cadastrar nova reciclagem</button>
+            </a>
+        </nav>
+    </div>
+    <div class="d-grip gap-3" style="margin-bottom: 1 rem;">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a href="/usuario/feed/texto2">
+                <button class="btn btn-primary">Voltar</button>
+            </a>
+        </nav>
+    </div>
+    <h1 style="margin-bottom: 1rem; text-align: left; margin-top: 1rem;">Eco Ponto</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4 text-center" style="text-align: center;">
+        <div class="col">
+            <div class="card h-100">
+                <img src="" class="card-img-top" alt="..." th:src="@{/images/reciclagem2.png}">
+                <div class="card-body" style="text-align: center;">
+                    <p class="card-text">Telefone: (00) 00000-0000</p>
+                    <p class="card-text">Endereço: Avenida da reciclagem, 321, São Paulo</p>
+                    <p class="card-text">Id de reciclagem: 2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

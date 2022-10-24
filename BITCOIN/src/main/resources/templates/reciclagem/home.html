@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{base :: head}"></head>
+<body>
+<div th:replace="~{base :: logo}"></div>
+<div class="container">
+    <div th:replace="~{base :: titulo('Nova reciclagem')}"></div>
+    <div class="d-grid gap-3" style="margin-bottom: 1rem;">
+    <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/home/}">HOME</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/pontos/}">Meus pontos</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/historico/}">Meu historico</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/loja/home/}">Loja</a>
+        <a href="/reciclagem">
+            <button class="btn btn-outline-secondary active" aria-current="page" >Cadastrar nova reciclagem</button>
+        </a>
+    </nav>
+    </div>
+    <h1 style="text-align: center;">RECICLAGEM</h1>
+    <form th:action="@{/reciclagem/nova}" th:object="${reciclagemVO}" action="/reciclagem/nova" class="card-body" method="post">
+        <label for="idFuncionario" style="font-weight: bold;">Seu id</label>
+        <div class="input-group mb-3">
+            <select id="idFuncionario" th:field="*{idFuncionario}" name="idFuncionario" class="form-select" aria-label="Default select example" placeholder="id Funcionario">
+                <option th:value="${idBancoDeDados}" th:text="${idBancoDeDados}"></option>
+            </select>
+        </div>
+        <label for="idPontoDeColeta" style="font-weight: bold;">Ponto de coleta em que está reciclando</label>
+        <div class="input-group mb-3">
+            <select id="idPontoDeColeta" th:field="*{idPontoDeColeta}" name="idPontoDeColeta" class="form-select" aria-label="Default select example" placeholder="idPontoDeColeta">
+                <option value="1">Reciclagem do seu zé</option>
+                <option value="2">Eco ponto</option>
+                <option value="3">Posto de coleta</option>
+            </select>
+        </div>
+        <label for="material" style="font-weight: bold;">Material da reciclagem</label>
+        <div class="input-group mb-3">
+            <select id="material" th:field="*{material}" name="material" class="form-select" aria-label="Default select example" placeholder="material">
+                <option value="PLASTICO">Plástico</option>
+                <option value="METAL">Metal</option>
+            </select>
+        </div>
+        <label for="quantidade" style="font-weight: bold;">Quantidade (em Kg)</label>
+        <div class="input-group mb-3">
+            <input id="quantidade" th:field="*{quantidade}" name="quantidade" class="form-control" placeholder="quantidade"/>
+            <span class="input-group-text" id="basic-addon2">Kg</span>
+        </div>
+        <button class="btn btn-primary mt-3" type="submit" style="text-align: center;">CADASTRAR</button>
+    </form>
+</div>
+</body>
+</html>

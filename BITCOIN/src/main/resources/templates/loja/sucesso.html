@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{base :: head}"></head>
+<body>
+<div th:replace="~{base :: logo}"></div>
+<div class="container">
+    <div th:replace="~{base :: titulo('Loja')}"></div>
+    <div class="d-grid gap-3" style="margin-bottom: 1rem;">
+    <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/home/}">HOME</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/pontos/}">Meus pontos</a>
+        <a class="flex-sm-fill text-sm-center nav-link" th:href="@{/usuario/historico/}">Meu historico</a>
+        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" th:href="@{/loja/home/}">Loja</a>
+        <a href="/reciclagem">
+            <button class="btn btn-outline-secondary">Cadastrar nova reciclagem</button>
+        </a>
+    </nav>
+    </div>
+    <div class="d-grip gap-3" style="margin-bottom: 1rem;">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a href="/loja/home">
+                <button class="btn btn-primary">Voltar</button>
+            </a>
+        </nav>
+    </div>
+    <div class="alert alert-success" role="alert" style="margin-top: 1rem;">
+        <h4 class="alert-heading">Compra realizada com sucesso!</h4>
+        <p>Sua troca foi efetivada com sucesso. Em breve você receberá o item escolhido em seu endereço cadastrado.</p>
+        <hr>
+        <p class="mb-0">Qualquer dúvida sinta-se a vontade para nos contatar em nossos meios de comunicação.</p>
+    </div>
+
+
+</div>
+</body>
+</html>
